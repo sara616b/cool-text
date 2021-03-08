@@ -1,0 +1,32 @@
+.cooltext {
+  display: flex;
+  flex-direction: row;
+  --delay: 0s;
+}
+
+span {
+  display: inline-block;
+}
+
+.letterfadein {
+  animation: letterfadein 1s;
+  animation-timing-function: cubic-bezier(0.44, 1.09, 0.71, 1.41);
+  animation-delay: var(--delay);
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes letterfadein {
+  0% {
+    transform: translateY(5vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.letterarcup {
+  animation-delay: calc(var(--delay) * 1s);
+}
