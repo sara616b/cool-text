@@ -23,8 +23,7 @@ function writetext() {
     let thisspan = document.createElement("span");
     console.log("logger");
     if (letterArray[l] == " ") {
-      thisspan.innerHTML = "-";
-      thisspan.style.color = "white";
+      thisspan.innerHTML = String.fromCharCode(160);
     } else {
       thisspan.innerHTML = letterArray[l];
     }
